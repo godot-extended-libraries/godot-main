@@ -1,0 +1,6 @@
+.vscode
+
+/config.ini
+/projects/*
+!/projects/.gdignore
+/test
