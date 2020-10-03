@@ -10,13 +10,12 @@ FileEncoding, UTF-8
 CreateAndEditNewGodotProject() {
 	if not FileExist("config.ini") {
 		IniWrite, % "", config.ini, paths, godot_exec
-		IniWrite, templates/default, config.ini, paths, template_project
+		IniWrite, templates\default, config.ini, paths, template_project
 	} else {
 		IniRead, godot_exec, config.ini, paths, godot_exec
 		IniRead, template_project, config.ini, paths, template_project
 	}
-	exec_found := FileExist(godot_exec)
-	while (not exec_found) {
+	while (not FileExist(godot_exec)) {
 		; If not set, ask to provide a path via the open dialog.
 		FileSelectFile, godot_exec, 3, godot.exe, Select Godot executable, *.exe
 		if (ErrorLevel == 1) {
@@ -25,7 +24,6 @@ CreateAndEditNewGodotProject() {
 		}
 		if (FileExist(godot_exec)) {
 			IniWrite, %godot_exec%, config.ini, paths, godot_exec
-			exec_found := True
 			break
 		}
 	}
