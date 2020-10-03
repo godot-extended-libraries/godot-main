@@ -4,3 +4,4 @@
 /projects/*
 !/projects/.gdignore
 /test
+/projects/test
