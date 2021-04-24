@@ -5,5 +5,6 @@
 !/projects/.gdignore
 /test
 /projects/test
+/templates/user
 
 /custom.ahk
