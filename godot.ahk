@@ -8,13 +8,14 @@ FileEncoding, UTF-8
 
 #If not use_custom
 ^!g::CreateAndEditProject() ; Ctrl + Alt + G
-^!e::OpenRecentProject()    ; Ctrl + Alt + E
+^!e::EditRecentProject()    ; Ctrl + Alt + E
 #If
 
 CreateAndEditProject() {
+	template_project := "templates\2d"
 	if not FileExist("config.ini") {
 		IniWrite, % "", config.ini, paths, godot_exec
-		IniWrite, templates\default, config.ini, paths, template_project
+		IniWrite, templates\2d, config.ini, paths, template_project
 	} else {
 		IniRead, godot_exec, config.ini, paths, godot_exec
 		IniRead, template_project, config.ini, paths, template_project
@@ -44,11 +45,14 @@ CreateAndEditProject() {
 	Run, %godot_exec% --path %project_path% --editor
 }
 
-OpenRecentProject() {
+EditRecentProject() {
 	if not FileExist("config.ini") {
 		return
 	} else {
 		IniRead, godot_exec, config.ini, paths, godot_exec
+	}
+	if not FileExist(godot_exec) {
+		return
 	}
 	recent_project_path := ""
 	Loop, Files, project.godot, FR

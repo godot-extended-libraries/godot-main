@@ -60,7 +60,7 @@ use_custom := True
 	if (user_input = "g")
 		CreateAndEditProject()
 	else if (user_input = "e")
-		OpenRecentProject()
+		EditRecentProject()
 	return
 ```
 
