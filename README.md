@@ -1,6 +1,6 @@
 # Godot Main
 
-Are you tired of the following process of creating a new projects in **Godot**?
+Are you tired of the following process of creating a new projects in [**Godot Engine**](https://godotengine.org/)?
 
 1. Open project manager.
 2. Create a new project.
@@ -17,20 +17,24 @@ your time on chores.
 ## Configuration
 
 The `templates/` directory in this repository contains 2D and 3D templates with
-`main.tscn` already instantiated.
+`main.tscn` already instantiated. The default environment is not present in 2D
+template to speed up project startup.
 
-The `config.ini` file *must* be created at the root of this repository with the
+The `config.ini` file can be created at the root of this repository with the
 following keys (values are just examples):
 ```ini
 [paths]
-godot_exec=D:\bin\godot\godot.exe
-template_project=templates\2d
+godot_executable=D:\bin\godot\godot.exe
+project_template=templates\2d
 ```
 
-- `godot_exec` is the absolute path to Godot executable;
-- `template_project` is a *relative* path to one of the project templates in the
-  `templates/` directory.
-  
+| Key                | Description                                                                      |
+| ------------------ | -------------------------------------------------------------------------------- |
+| `godot_executable` | The absolute path to Godot's executable                                          |
+| `project_template` | A *relative* path to one of the project templates in the `templates/` directory. |
+
+If the `config.ini` file does not exist, a new one will be created by a script.
+
 User-defined templates can be created at `templates/user/` directory (which is
 `gitignore`d).
 
