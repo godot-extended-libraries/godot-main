@@ -1,7 +1,7 @@
 .vscode
 
 /config.ini
-/projects/*
+/projects
 !/projects/.gdignore
 /test
 /projects/test
