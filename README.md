@@ -50,7 +50,7 @@ After launching the script, use <kbd>Ctrl + Alt + G</kbd> to *create* and edit a
 new project, and <kbd>Ctrl + Alt + E</kbd> to *launch* and edit recently edited
 project immediately.
 
-Optinally, a `custom.ahk` can be created to override the default shortcuts. Make
+Optionally, a `custom.ahk` can be created to override the default shortcuts. Make
 sure to write `use_custom := True` at the top. For instance:
 ```ahk
 use_custom := True
