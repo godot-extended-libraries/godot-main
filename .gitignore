@@ -1,10 +1,10 @@
 .vscode
 
-/config.ini
 /projects
 !/projects/.gdignore
 /test
 /projects/test
 /templates/user
 
+/config.*
 /custom.*
