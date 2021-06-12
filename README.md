@@ -1,6 +1,6 @@
 # Godot Main
 
-Are you tired of the following process of creating a new projects in [**Godot Engine**](https://godotengine.org/)?
+Are you tired of the following process of creating new projects in [**Godot Engine**](https://godotengine.org/)?
 
 1. Open project manager.
 2. Create a new project.
@@ -51,7 +51,7 @@ The `godot.ahk` can be launched on Windows with
 [AutoHotKey](https://www.autohotkey.com/) installed.
 
 After launching the script, use <kbd>Ctrl + Alt + G</kbd> to *create* and edit a
-new project, and <kbd>Ctrl + Alt + E</kbd> to *launch* and edit recently edited
+new project, and <kbd>Ctrl + Alt + E</kbd> to *launch* and edit a recently edited
 project immediately.
 
 Optionally, a `custom.ahk` can be created to override the default shortcuts. Make
