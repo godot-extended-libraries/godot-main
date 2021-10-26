@@ -51,8 +51,11 @@ The `godot.ahk` can be launched on Windows with
 [AutoHotKey](https://www.autohotkey.com/) installed.
 
 After launching the script, use <kbd>Ctrl + Alt + G</kbd> to *create* and edit a
-new project, and <kbd>Ctrl + Alt + E</kbd> to *launch* and edit a recently edited
-project immediately.
+new project, and <kbd>Ctrl + Alt + E</kbd> to *open* and edit recently edited
+project immediately. If you need to switch between several projects, you can
+*manually* navigate existing project by pressing <kbd>Ctrl + Alt + O</kbd>
+instead. Pressing <kbd>Ctrl + Alt + E</kbd> will *automatically* open recently
+edited project again.
 
 Optionally, a `custom.ahk` can be created to override the default shortcuts. Make
 sure to write `use_custom := True` at the top. For instance:
